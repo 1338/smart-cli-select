@@ -110,6 +110,8 @@ class SmartCliSelect
                 }
             }
         }
+        $return['selected'] = $chosen;
+
         return $return;
     }
 
