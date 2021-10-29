@@ -1,0 +1,18 @@
+{
+  "name": "1338/smart-cli-select",
+  "description": "cli tool",
+  "type": "library",
+  "license": "Beerware",
+  "authors": [{
+    "name": "Max van der Sluis",
+    "email": "maxvandersluis@yahoo.com"
+  }],
+  "require": {
+    "symfony/console": "^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SmartCliSelect\\": ""
+    }
+  }
+}
