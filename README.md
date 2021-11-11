@@ -11,6 +11,7 @@ How to call:
         "Question",
         ["preselected choices indexes"],
         ["choices"],
+        false, // force preselection choices
         ["structure to create new options"]
     );
 ```
@@ -26,6 +27,7 @@ Object
         "Select products",
         [$allProductsIndexedBySkus[0]],
         $allProductsIndexedBySkus,
+        false, // force preselection choices
         ['type' => 'object']
     );
 
@@ -51,6 +53,7 @@ Object with a subset of options to be filled
         "Select products",
         [$allProductsIndexedBySkus[0]],
         $allProductsIndexedBySkus,
+        false, // force preselection choices
         [
             'type' => 'object',
             'options' => [
@@ -80,6 +83,7 @@ Array
             'Select hosts',
             array_keys($this->instances),
             $this->input->getOption('host'),
+            false, // force preselection choices
             [
                 'options' => ['host', 'username', 'pass', 'port']
             ]

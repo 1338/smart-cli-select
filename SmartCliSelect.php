@@ -32,6 +32,7 @@ class SmartCliSelect
         string $questionString,
                $allChoices = [],
                $preSelected = [],
+               $force = false,
                $createStructure = []
     ): array
     {
@@ -49,12 +50,17 @@ class SmartCliSelect
             $chosen,
             $allChoices,
             $specialCases,
+            $force,
             $createStructure
         );
     }
 
-    private function selectOptions($questionString, $chosen, $allChoices, $specialCases, $createStructure): array
+    private function selectOptions($questionString, $chosen, $allChoices, $specialCases, $force, $createStructure): array
     {
+        if($force) {
+            return ['selected' => $chosen];
+        }
+
         $return = [
             'selected' => [],
             'new' => []
