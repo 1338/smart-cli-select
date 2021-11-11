@@ -57,7 +57,7 @@ class SmartCliSelect
 
     private function selectOptions($questionString, $chosen, $allChoices, $specialCases, $force, $createStructure): array
     {
-        if($force) {
+        if($force !== false) {
             return ['selected' => $chosen];
         }
 
